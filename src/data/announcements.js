@@ -16,7 +16,7 @@
 export const announcements = [
   {
     id: 1,
-    enabled: true,
+    enabled: false,
     icon: '🎉',
     type: 'promo', // 'promo' | 'offer' | 'urgent' | 'info'
     message: 'Diwali Special! Free Antivirus + PC Cleaning with every Laptop Repair this month.',
@@ -58,6 +58,29 @@ export const announcements = [
     ctaWhatsApp: false,
     whatsAppMessage: '',
   },
+  {
+  id: 5,
+  enabled: false,
+  icon: '🙏',
+  type: 'promo',
+  message: '🪔 Ganesh Chaturthi Special! 🎉 Get amazing discounts & combo offers on Computer, Laptop, CCTV & Accessories — Best Deals at Lowest Prices! Limited Time Only.',
+  ctaText: 'Get Offer',
+  ctaLink: '/contact',
+  ctaWhatsApp: true,
+  whatsAppMessage: 'Hello, I saw your Ganesh Chaturthi Special offer. Please share the available discounts and combo offers at the lowest prices.',
+},
+{
+  id: 6,
+  enabled: true,
+  icon: '🙏',
+  type: 'offer',
+  message: 'Ganesh Chaturthi Special! 🎉 Huge Discounts + Combo Offers — Best Products at Lowest Prices! Limited Time!',
+  ctaText: 'Get Offer',
+  ctaLink: '/contact',
+  ctaWhatsApp: true,
+  whatsAppMessage: 'Hello, I am interested in your Ganesh Chaturthi Special discounts and combo offers. Please share the best available deals.',
+},
+
 ]
 
 export default announcements
