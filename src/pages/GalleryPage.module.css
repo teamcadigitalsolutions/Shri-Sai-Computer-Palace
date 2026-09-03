@@ -1,0 +1,6 @@
+.pageHeader { background: var(--color-surface); padding-block: var(--space-12) var(--space-6); border-bottom: 1px solid var(--color-border); }
+.instaCta { padding-block: var(--space-10); background: var(--color-surface); border-top: 1px solid var(--color-border); }
+.instaBox { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); text-align: center; }
+.instaBox p { font-size: var(--text-base); color: var(--color-text-secondary); }
+.instaLink { display: inline-flex; align-items: center; gap: var(--space-2); background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: #fff; padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); font-weight: var(--font-weight-semibold); text-decoration: none; font-size: var(--text-base); transition: opacity var(--transition-base), transform var(--transition-fast); }
+.instaLink:hover { opacity: 0.9; color: #fff; transform: translateY(-1px); }

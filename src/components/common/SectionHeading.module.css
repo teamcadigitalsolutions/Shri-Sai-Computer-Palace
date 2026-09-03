@@ -1,0 +1,9 @@
+﻿.wrapper { margin-bottom: var(--space-10); }
+.align--center { text-align: center; }
+.align--left { text-align: left; }
+.title { font-size: var(--text-3xl); font-weight: var(--font-weight-bold); color: var(--color-text); line-height: var(--line-height-tight); margin-bottom: var(--space-3); }
+@media (min-width: 768px) { .title { font-size: var(--text-4xl); } }
+.subtitle { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 600px; line-height: var(--line-height-relaxed); }
+.align--center .subtitle { margin-inline: auto; }
+.divider { width: 56px; height: 4px; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); border-radius: var(--radius-full); margin-top: var(--space-4); }
+.align--center .divider { margin-inline: auto; }

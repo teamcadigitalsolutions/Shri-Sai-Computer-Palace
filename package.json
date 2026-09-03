@@ -1,0 +1,27 @@
+{
+  "name": "shri-sai-computer-palace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Professional local business website — Shri Sai Computer Palace, Kumta, Karnataka",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "react-helmet-async": "^2.0.5",
+    "framer-motion": "^11.11.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^9.11.1",
+    "vite": "^5.4.8"
+  }
+}

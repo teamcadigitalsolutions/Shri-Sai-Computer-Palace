@@ -1,0 +1,10 @@
+.card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+.title { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-5); }
+.list { display: flex; flex-direction: column; gap: 0; }
+.row { display: flex; justify-content: space-between; align-items: center; font-size: var(--text-sm); padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--color-border); gap: var(--space-4); }
+.row:last-child { border-bottom: none; }
+.today { background: var(--color-primary-xlight); border-radius: var(--radius-md); margin-inline: calc(var(--space-2) * -1); padding-inline: var(--space-2); }
+.day { color: var(--color-text-secondary); display: flex; align-items: center; gap: var(--space-2); font-weight: var(--font-weight-medium); }
+.todayBadge { background: var(--color-primary); color: #fff; font-size: var(--text-xs); padding: 1px 6px; border-radius: var(--radius-full); font-weight: var(--font-weight-semibold); }
+.time { color: var(--color-text); font-weight: var(--font-weight-semibold); }
+.closed { color: var(--color-text-muted); font-style: italic; }
