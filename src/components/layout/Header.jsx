@@ -56,7 +56,8 @@ export function Header() {
             </div>
             <div className={styles.logoText}>
               <span className={styles.logoMain}>{business.shortName}</span>
-              <span className={styles.logoSub}>Kumta, Karnataka</span>
+              {/* <span className={styles.logoSub}>Kumta, Karnataka</span> */}
+              <span className={styles.logoSub}>Kumta, Karnataka ❤️</span>
             </div>
           </Link>
 
