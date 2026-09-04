@@ -4,6 +4,7 @@ import { SectionHeading } from '@/components/common/SectionHeading'
 import { ContactForm } from '@/components/contact/ContactForm'
 import { BusinessHours } from '@/components/contact/BusinessHours'
 import { MapEmbed } from '@/components/contact/MapEmbed'
+import { OwnerCard } from '@/components/contact/OwnerCard'
 import { business } from '@/data/businessInfo'
 import styles from './ContactPage.module.css'
 
@@ -57,6 +58,8 @@ export function ContactPage() {
             <div className={styles.formSection}>
               <h2 className={styles.formTitle}>Send Us a Message</h2>
               <p className={styles.formSubtitle}>Fill in the form and we'll get back to you via your preferred contact method.</p>
+              {/* Owner card — sits between heading and form */}
+              <OwnerCard />
               <ContactForm />
             </div>
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { TopBar } from '@/components/layout/TopBar'
@@ -37,11 +37,20 @@ function AnimatedRoute({ children }) {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname])
+  return null
+}
+
 function AppContent() {
   const location = useLocation()
 
   return (
     <>
+      <ScrollToTop />
       {/* Skip to main content — accessibility */}
       <a href="#main-content" className="sr-only" style={{ position: 'absolute', left: '-9999px' }}>
         Skip to main content

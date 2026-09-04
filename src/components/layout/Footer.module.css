@@ -45,6 +45,12 @@
   margin-bottom: var(--space-4);
 }
 
+/* Override global p rule which sets dark color — address is on dark bg */
+.address p {
+  color: #CBD5E1;
+  line-height: var(--line-height-relaxed);
+}
+
 .contactLinks {
   display: flex;
   flex-direction: column;

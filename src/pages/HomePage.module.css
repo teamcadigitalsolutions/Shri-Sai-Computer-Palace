@@ -1,13 +1,145 @@
-.ctaBanner { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); padding-block: var(--space-16); }
-.ctaContent { display: flex; flex-direction: column; gap: var(--space-8); align-items: flex-start; }
-@media (min-width: 1024px) { .ctaContent { flex-direction: row; align-items: center; justify-content: space-between; } }
-.ctaText h2 { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: var(--font-weight-bold); color: #fff; margin-bottom: var(--space-2); }
-.ctaText p { font-size: var(--text-lg); color: rgba(255,255,255,0.85); }
-.ctaActions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
-.ctaCall, .ctaWa, .ctaBook { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); font-weight: var(--font-weight-semibold); text-decoration: none; font-size: var(--text-base); transition: all var(--transition-base); white-space: nowrap; }
-.ctaCall { background: #fff; color: var(--color-primary); }
-.ctaCall:hover { background: var(--color-primary-xlight); color: var(--color-primary-dark); transform: translateY(-1px); }
-.ctaWa { background: var(--color-whatsapp); color: #fff; }
-.ctaWa:hover { background: var(--color-whatsapp-dark); color: #fff; transform: translateY(-1px); }
-.ctaBook { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.7); }
-.ctaBook:hover { background: rgba(255,255,255,0.15); transform: translateY(-1px); }
+﻿/* ── CTA Banner — rich gradient upgrade ─────────── */
+.ctaBanner {
+  background: linear-gradient(135deg, #0b1f3a 0%, #0e3060 40%, #0284c7 100%);
+  padding-block: var(--space-16);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dot pattern overlay */
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+/* Decorative blurred orb */
+.ctaBanner::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,165,233,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .ctaContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Availability indicator */
+.ctaAvailability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-3);
+}
+.ctaDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74,222,128,0.7);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.7); }
+  70%  { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+}
+.ctaAvailText {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #4ade80;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ctaText h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: var(--space-2);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.ctaText p {
+  font-size: var(--text-lg);
+  color: rgba(255,255,255,0.78);
+  max-width: 480px;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.ctaCall, .ctaWa, .ctaBook {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: var(--text-base);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaCall {
+  background: #fff;
+  color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.ctaCall:hover {
+  background: var(--color-primary-xlight);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.ctaWa {
+  background: var(--color-whatsapp);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+}
+.ctaWa:hover {
+  background: var(--color-whatsapp-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+}
+
+.ctaBook {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(4px);
+}
+.ctaBook:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-2px);
+}

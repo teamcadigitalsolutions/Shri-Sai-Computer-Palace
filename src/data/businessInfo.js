@@ -139,6 +139,26 @@ export const business = {
       { label: 'Get a Quote', icon: '📋', message: 'Hello, I would like a quote for a custom PC build.' },
     ],
   },
+
+  // ── Owner / Team ──────────────────────────────────────────────────────────
+  owner: {
+    name: 'Ganesh Shetty',
+    title: 'Founder & Chief Technician',
+    experience: '10+ Years',
+    experienceLabel: 'in Computer Hardware & Software',
+    photo: '/team/owner.png',          // replace with real photo at public/team/owner.jpg
+    instagram: 'https://www.instagram.com/shrisaicomputerpalace/',
+    instagramHandle: '@shrisaicomputerpalace',
+    summary:
+      'With over a decade of hands-on experience in computer hardware, software, and IT services, Ganesh Shetty founded Shri Sai Computer Palace with a simple mission — to give Kumta and surrounding areas access to honest, professional, and affordable computer services. From diagnosing complex motherboard faults to building high-performance custom PCs, Ganesh personally oversees every service to ensure quality you can trust.',
+    highlights: [
+      '10+ years in computer hardware & software',
+      'Expert in laptop & desktop repair for all major brands',
+      'Custom PC builds for gaming, editing & workstations',
+      'CCTV installation & networking solutions',
+      'Trusted by students, professionals & local businesses',
+    ],
+  },
 }
 
 export default business
