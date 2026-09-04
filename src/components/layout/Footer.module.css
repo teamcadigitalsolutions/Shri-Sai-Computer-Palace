@@ -153,6 +153,14 @@
   padding-block: var(--space-5);
 }
 
+/* Add extra padding on mobile so the sticky Call/WhatsApp bar doesn't hide the copyright text */
+@media (max-width: 768px) {
+  .bottom {
+    padding-bottom: calc(var(--space-5) + 70px);
+    padding-right: 80px; /* Safe zone for the floating chat widget */
+  }
+}
+
 .bottom .container {
   display: flex;
   justify-content: space-between;

@@ -1,6 +1,6 @@
 .container {
   position: fixed;
-  bottom: var(--space-6);
+  bottom: calc(var(--space-6) + 65px); /* Lift above sticky MobileActionBar on mobile */
   right: var(--space-4);
   display: flex;
   flex-direction: column;
